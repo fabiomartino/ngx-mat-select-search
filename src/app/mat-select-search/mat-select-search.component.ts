@@ -22,7 +22,7 @@ import {
   SPACE,
 } from '@angular/cdk/keycodes';
 import { Subject } from 'rxjs';
-import {delay, take, takeUntil} from 'rxjs/operators';
+import { delay, take, takeUntil } from 'rxjs/operators';
 import { MatSelectSearchClearDirective } from './mat-select-search-clear.directive';
 
 /* tslint:disable:member-ordering component-selector */

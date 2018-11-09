@@ -1,12 +1,10 @@
 import { Component, ViewChild, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
-import {VERSION} from '@angular/material';
+import { VERSION } from '@angular/material';
 import { FormControl } from '@angular/forms';
-import {MatSelect} from '@angular/material';
+import { MatSelect } from '@angular/material';
 
-import { ReplaySubject } from 'rxjs';
-import { Subject } from 'rxjs';
-import { take } from 'rxjs/operators';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, ReplaySubject } from 'rxjs';
+import { take, takeUntil } from 'rxjs/operators';
 
 interface Bank {
  id: string;

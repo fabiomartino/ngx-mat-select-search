@@ -8,6 +8,7 @@ import { Directive } from '@angular/core';
  * </ngx-mat-select-search>
  */
 @Directive({
+    // tslint:disable-next-line:directive-selector
     selector: '[ngxMatSelectSearchClear]'
 })
 export class MatSelectSearchClearDirective {}

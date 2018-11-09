@@ -14,10 +14,8 @@ import {
   MatFormFieldModule, MatSelect,
   MatSelectModule
 } from '@angular/material';
-import { ReplaySubject } from 'rxjs';
-import { Subject } from 'rxjs';
-import {delay, take} from 'rxjs/operators';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, ReplaySubject } from 'rxjs';
+import { delay, take, takeUntil } from 'rxjs/operators';
 
 import { MatSelectSearchComponent } from './mat-select-search.component';
 import { NgxMatSelectSearchModule } from './ngx-mat-select-search.module';
@@ -247,6 +245,7 @@ describe('MatSelectSearchComponent', () => {
             )
             .subscribe((opened) => {
               expect(opened).toBe(true);
+              // tslint:disable-next-line:max-line-length
               const searchField = document.querySelector('.cdk-overlay-pane-select-search .mat-select-search-inner .mat-select-search-input');
               const searchInner = document.querySelector('.cdk-overlay-pane-select-search .mat-select-search-inner');
               expect(searchInner).toBeTruthy();
@@ -266,6 +265,7 @@ describe('MatSelectSearchComponent', () => {
     });
 
 
+    // tslint:disable-next-line:max-line-length
     it('should filter the options available and hightlight the first option in the list, filter the options by input "c" and reset the list', (done) => {
 
       component.filteredBanks
@@ -281,6 +281,7 @@ describe('MatSelectSearchComponent', () => {
             .pipe(take(1))
             .subscribe((opened) => {
               expect(opened).toBe(true);
+              // tslint:disable-next-line:max-line-length
               const searchField = document.querySelector('.cdk-overlay-pane-select-search .mat-select-search-inner .mat-select-search-input');
               expect(searchField).toBeTruthy();
 
@@ -375,6 +376,7 @@ describe('MatSelectSearchComponent', () => {
 
     }));
 
+    // tslint:disable-next-line:max-line-length
     it('set the initial selection with multi=true and filter the options available, filter the options by input "c" and select an option', async((done) => {
       component.initialMultiSelection = [component.banks[1]];
       fixture.detectChanges();
@@ -400,6 +402,7 @@ describe('MatSelectSearchComponent', () => {
                     expect(component.matSelectMulti.value).toEqual([component.banks[1]]);
                     expect(component.bankMultiCtrl.value).toEqual([component.banks[1]]);
 
+                    // tslint:disable-next-line:max-line-length
                     const searchField = document.querySelector('.cdk-overlay-pane-select-search .mat-select-search-inner .mat-select-search-input');
                     expect(searchField).toBeTruthy();
 
@@ -460,7 +463,9 @@ describe('MatSelectSearchComponent', () => {
 
                                   setTimeout(() => {
                                     fixture.detectChanges();
+                                    // tslint:disable-next-line:max-line-length
                                     expect(component.matSelectMulti.value).toEqual([component.banks[1], component.banks[2], component.banks[3]]);
+                                    // tslint:disable-next-line:max-line-length
                                     expect(component.bankMultiCtrl.value).toEqual([component.banks[1], component.banks[2], component.banks[3]]);
                                     done();
 
